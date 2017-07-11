@@ -1,2 +1,2 @@
 # swagger-gradle-plugin
-A wrapper for swagger-maven-plugin.
+The main idea is to reuse existing maven plugin.
