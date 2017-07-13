@@ -23,7 +23,7 @@ apply plugin: 'com.github.zhurlik.swagger'
 task('swaggertest', type: SwaggerTask) {
 
     // any dirs with classes
-    src = [
+    classesDirs = [
         file('classes/main')
         // project(':your-project').sourceSets['main'].output.classesDir
     ]

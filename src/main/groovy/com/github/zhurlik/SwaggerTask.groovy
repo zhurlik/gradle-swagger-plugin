@@ -19,7 +19,7 @@ class SwaggerTask extends DefaultTask {
     /**
      * A list of directories with java classes for scanning.
      */
-    List<File> src = []
+    List<File> classesDirs = []
 
     /**
      * A list of ApiSources objects for Swagger maven plugin.
@@ -31,7 +31,7 @@ class SwaggerTask extends DefaultTask {
         logger.info "Making Swagger json..."
 
         // a trick to have all needed project classes in the classpath
-        src.each {
+        classesDirs.each {
             project.buildscript.classLoader.addURL it.toURI().toURL()
         }
 
