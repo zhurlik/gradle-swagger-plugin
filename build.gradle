@@ -2,6 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'groovy'
 apply plugin: 'jacoco'
 apply plugin: 'com.gradle.plugin-publish'
+apply plugin: 'com.github.kt3k.coveralls'
 
 buildscript {
     repositories {
@@ -11,6 +12,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.gradle.publish:plugin-publish-plugin:0.9.7'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.+'
     }
 }
 
@@ -44,6 +46,13 @@ test {
     // listen to standard out and standard error of the test JVM(s)
     onOutput { descriptor, event ->
         logger.lifecycle("Test: $descriptor produced standard out/err: ${event.message}")
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
     }
 }
 
