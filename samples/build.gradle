@@ -25,6 +25,7 @@ task('swaggertest', type: SwaggerTask) {
     // any dirs with classes
     src = [
         file('classes/main')
+        // project(':your-project').sourceSets['main'].output.classesDir
     ]
 
     apiSources = [
