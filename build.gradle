@@ -63,7 +63,7 @@ jacocoTestReport {
 // The configuration example below shows the minimum required properties
 // configured to publish your plugin to the plugin portal
 pluginBundle {
-    website = 'https://github.com/zhurlik'
+    website = 'https://github.com/zhurlik/gradle-swagger-plugin'
     vcsUrl = 'https://github.com/zhurlik/gradle-swagger-plugin'
     description = 'A gradle plugin for using swagger-maven-plugin'
     tags = ['java', 'swagger', 'maven', 'gradle', 'plugin', 'groovy']
