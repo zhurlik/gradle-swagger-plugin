@@ -14,7 +14,7 @@ import org.gradle.api.tasks.TaskAction
  *
  */
 @Slf4j('logger')
-class SwaggerJsonTask extends DefaultTask {
+class SwaggerTask extends DefaultTask {
 
     /**
      * A list of directories with java classes for scanning.

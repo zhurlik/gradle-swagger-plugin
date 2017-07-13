@@ -1,5 +1,5 @@
 import com.github.kongchen.swagger.docgen.mavenplugin.ApiSource
-import com.github.zhurlik.SwaggerJsonTask
+import com.github.zhurlik.SwaggerTask
 import io.swagger.models.Contact
 import io.swagger.models.Info
 import io.swagger.models.License
@@ -20,7 +20,7 @@ buildscript {
 
 apply plugin: 'com.github.zhurlik.swagger'
 
-task('swaggertest', type: SwaggerJsonTask) {
+task('swaggertest', type: SwaggerTask) {
 
     // any dirs with classes
     src = [
