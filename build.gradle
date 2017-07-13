@@ -1,6 +1,18 @@
 apply plugin: 'idea'
 apply plugin: 'groovy'
 apply plugin: 'jacoco'
+apply plugin: 'com.gradle.plugin-publish'
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath 'com.gradle.publish:plugin-publish-plugin:0.9.7'
+    }
+}
 
 group = 'com.github.zhurlik'
 
@@ -32,5 +44,21 @@ test {
     // listen to standard out and standard error of the test JVM(s)
     onOutput { descriptor, event ->
         logger.lifecycle("Test: $descriptor produced standard out/err: ${event.message}")
+    }
+}
+
+// The configuration example below shows the minimum required properties
+// configured to publish your plugin to the plugin portal
+pluginBundle {
+    website = 'https://github.com/zhurlik'
+    vcsUrl = 'https://github.com/zhurlik/gradle-swagger-plugin'
+    description = 'A gradle plugin for using swagger-maven-plugin'
+    tags = ['java', 'swagger', 'maven', 'gradle', 'plugin', 'groovy']
+
+    plugins {
+        jbossModulesPlugin {
+            id = 'com.github.zhurlik.swagger'
+            displayName = 'Gradle plugin for using swagger-maven-plugin'
+        }
     }
 }
