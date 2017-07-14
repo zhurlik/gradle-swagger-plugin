@@ -6,7 +6,7 @@
 This plugin executes the standard maven plugin for Swagger.
 
 ## How to use    
-You can find a simple example in [here](samples/build.gradle)    
+You can find a simple example [here](samples/build.gradle)    
 
 ```groovy
 buildscript {
