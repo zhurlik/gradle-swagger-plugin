@@ -5,6 +5,29 @@
 ## About
 This plugin executes the standard maven plugin for Swagger.
 
+## BuildScript
+Note that for using this guy you have to added into classpath under buildscript required swagger jars.
+```groovy
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+    mavenCentral()
+  }
+  
+  dependencies {
+    classpath "gradle.plugin.com.github.zhurlik:gradle-swagger-plugin:0.2"
+    // swagger
+    classpath group: 'io.swagger', name: 'swagger-core', version: '1.5.+'
+    classpath group: 'com.github.kongchen', name: 'swagger-maven-plugin', version: '3.1.+'
+  }
+```
+## Swagger Task
+After adding this plugin you will have the task [SwaggerTask](https://github.com/zhurlik/gradle-swagger-plugin/blob/master/src/main/groovy/com/github/zhurlik/SwaggerTask.groovy) that has 2 important attributes:
+* **classesDirs** - to specify dirs for scanning classes with Swagger annotations
+* **apiSources** - to declare a list of ApiSource
+
 ## How to use    
 You can find a simple example [here](samples/build.gradle)    
 
