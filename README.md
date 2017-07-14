@@ -18,10 +18,10 @@ buildscript {
   }
   
   dependencies {
-    classpath "gradle.plugin.com.github.zhurlik:gradle-swagger-plugin:0.1"
+    classpath "gradle.plugin.com.github.zhurlik:gradle-swagger-plugin:0.2"
     // swagger
-    classpath group: 'io.swagger', name: 'swagger-core', version: '1.5.10'
-    classpath group: 'com.github.kongchen', name: 'swagger-maven-plugin', version: '3.1.4'
+    classpath group: 'io.swagger', name: 'swagger-core', version: '1.5.+'
+    classpath group: 'com.github.kongchen', name: 'swagger-maven-plugin', version: '3.1.+'
   }
 }
 
