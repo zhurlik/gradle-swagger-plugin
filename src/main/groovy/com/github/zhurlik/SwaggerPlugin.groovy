@@ -42,8 +42,8 @@ buildscript {
 
             // to be able to use swagger
             dependencies {
-                classpath group: 'io.swagger', name: 'swagger-core', version: '1.5.10'
-                classpath group: 'com.github.kongchen', name: 'swagger-maven-plugin', version: '3.1.4'
+                classpath group: 'io.swagger', name: 'swagger-core', version: '1.5.+'
+                classpath group: 'com.github.kongchen', name: 'swagger-maven-plugin', version: '3.1.+'
             }
         }
 """
